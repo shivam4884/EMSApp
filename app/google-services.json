@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1016642347324",
+    "firebase_url": "https://emsapp-7a5a9.firebaseio.com",
+    "project_id": "emsapp-7a5a9",
+    "storage_bucket": "emsapp-7a5a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016642347324:android:8edd566ac96c0ee5",
+        "android_client_info": {
+          "package_name": "com.example.windows10.ems"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016642347324-17i94g5233suco17j0hbg7fpmlp9oefi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4Nr-B1U08-mSzqkDQkiNKHB8XNAB8Hh4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

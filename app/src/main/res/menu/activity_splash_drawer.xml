@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+
+    <item android:title="Menu Bar">
+        <menu>
+
+
+            <item
+                android:id="@+id/nav_request"
+                android:icon="@drawable/ic_request"
+                android:title="Request" />
+            <item
+                android:id="@+id/nav_time_table"
+                android:icon="@drawable/ic_timetable"
+                android:title="Time Table" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="My Meetings" />
+            <item
+                android:id="@+id/nav_chat"
+                android:icon="@drawable/ic_chat"
+                android:title="Notice Board" />
+            <item
+                android:id="@+id/list"
+                android:icon="@drawable/ic_chat"
+                android:title="List" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Logout"
+                />
+        </menu>
+    </item>
+
+</menu>

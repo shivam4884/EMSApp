@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context="ems.hackathon.emsapp.NewEventActivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:text="MEETING ORGANISER"
+                android:textColor="@color/fbutton_color_belize_hole"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMeeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_style"
+                android:gravity="center"
+                android:text="Shivam Goyal"
+                android:textSize="19dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Time Slot :"
+                android:textColor="@color/fbutton_color_belize_hole"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Start" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="-"
+                    android:textColor="@color/fbutton_color_belize_hole"
+                    android:textSize="19dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="End" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="34dp"
+                android:layout_margin="10dp"
+                android:text="Title"
+                android:textColor="@color/fbutton_color_belize_hole"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_style"
+                android:hint="Hackathon"
+                android:inputType="text"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:textSize="19dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="Member Details"
+            android:textColor="@color/fbutton_color_belize_hole"
+            android:textSize="19dp"
+            android:textStyle="bold" />
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:foregroundTint="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="18dp"
+            android:textAlignment="gravity"
+            app:ms_alignLabels="false"
+            app:ms_arrowColor="@android:color/black"
+            app:ms_arrowSize="16dp"
+            app:ms_baseColor="@color/colorPrimaryDark"
+            app:ms_dropDownHintView="@layout/support_simple_spinner_dropdown_item"
+            app:ms_enableErrorLabel="false"
+            app:ms_enableFloatingLabel="false"
+            app:ms_floatingLabelColor="@android:color/black"
+            app:ms_floatingLabelText="floating label"
+            app:ms_highlightColor="@color/fbutton_color_carrot"
+            app:ms_multiline="false"
+            app:ms_thickness="1dp"
+            >
+
+        </fr.ganfra.materialspinner.MaterialSpinner>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Submit"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:backgroundTint="@color/fbutton_color_belize_hole"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+</ScrollView>
