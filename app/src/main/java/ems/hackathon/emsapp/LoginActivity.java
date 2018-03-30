@@ -15,6 +15,7 @@ public class LoginActivity extends AppCompatActivity {
     FButton btnLogin;
     String aadhar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,20 +55,17 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 aadhar = txtAadhar.getText().toString().replace("-", "");
-                if (aadhar.length() == 12) {
-                    if (aadhar.matches("[0-9]+")) {
-                        Intent intent = new Intent(getApplication(), MainActivity.class);
-                        startActivity(intent);
+                if (aadhar.length() == 10) {
+                    Intent intent = new Intent(getApplication(), MainActivity.class);
+                    startActivity(intent);
                         Toast.makeText(getApplication(), "Login successful!!", Toast.LENGTH_LONG).show();
                         finish();
                     } else {
-                        Toast.makeText(getApplication(), "Enter Valid Aadhar Number!!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplication(), "Enter Valid  ID !!", Toast.LENGTH_LONG).show();
                     }
-                } else {
-                    Toast.makeText(getApplication(), "Enter Valid Aadhar Number!!", Toast.LENGTH_LONG).show();
                 }
 
             }
-        });
+        );
     }
 }
