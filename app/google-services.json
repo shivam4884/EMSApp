@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "1016642347324",
-    "firebase_url": "https://emsapp-7a5a9.firebaseio.com",
-    "project_id": "emsapp-7a5a9",
-    "storage_bucket": "emsapp-7a5a9.appspot.com"
+    "project_number": "1002918638932",
+    "firebase_url": "https://emsapp-5cd4f.firebaseio.com",
+    "project_id": "emsapp-5cd4f",
+    "storage_bucket": "emsapp-5cd4f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1016642347324:android:8edd566ac96c0ee5",
+        "mobilesdk_app_id": "1:1002918638932:android:116472cf2de56939",
         "android_client_info": {
-          "package_name": "com.example.windows10.ems"
+          "package_name": "ems.hackathon.emsapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1016642347324-17i94g5233suco17j0hbg7fpmlp9oefi.apps.googleusercontent.com",
+          "client_id": "1002918638932-7kvnugmaspkc1vivlfneutb6jn7q7vvu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ems.hackathon.emsapp",
+            "certificate_hash": "eeedad38369c897f8c0f4ee5c2dc8f639f56b5f6"
+          }
+        },
+        {
+          "client_id": "1002918638932-imu3efo2h0smbg5tgcuko4p4n44j8ouf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD4Nr-B1U08-mSzqkDQkiNKHB8XNAB8Hh4"
+          "current_key": "AIzaSyBmwksZ6pPTnzKGqdpjgO26_FNpvb0ldNE"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002918638932-imu3efo2h0smbg5tgcuko4p4n44j8ouf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
