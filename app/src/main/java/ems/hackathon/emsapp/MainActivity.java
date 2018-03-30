@@ -20,13 +20,22 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import ems.hackathon.emsapp.model.Meeting;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    FirebaseDatabase db;
+    DatabaseReference dbRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        db = FirebaseDatabase.getInstance();
+        dbRef = db.getReference();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -34,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,NewEventActivity.class);
+                Intent intent = new Intent(MainActivity.this, NewEventActivity.class);
                 startActivity(intent);
             }
         });
@@ -47,6 +56,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Meeting mtng = new Meeting("12:00", "2:00", "Sample", "30/3/2018", "Hubli", "SIH", "Shivam");
+        dbRef.child("meetings").child("M1").setValue(mtng);
+
     }
 
     @Override
@@ -79,7 +92,7 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-            Intent i   = new Intent(MainActivity.this,SettingsActivity.class);
+            Intent i = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(i);
         }
 
@@ -95,16 +108,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_request) {
             // Handle the camera action
         } else if (id == R.id.nav_time_table) {
-            Intent  i = new Intent(MainActivity.this,TimeTable.class);
+            Intent i = new Intent(MainActivity.this, TimeTable.class);
             startActivity(i);
-        }
-        else if (id == R.id.nav_chat) {
+        } else if (id == R.id.nav_chat) {
 
-        }
-        else if (id == R.id.list) {
+        } else if (id == R.id.list) {
 
-        }
-        else if (id == R.id.logout) {
+        } else if (id == R.id.logout) {
             Intent broadcastIntent = new Intent();
             broadcastIntent.setAction("com.package.ACTION_LOGOUT");
             sendBroadcast(broadcastIntent);
@@ -113,7 +123,7 @@ public class MainActivity extends AppCompatActivity
             registerReceiver(new BroadcastReceiver() {
                 @Override
                 public void onReceive(Context context, Intent intent) {
-                    Log.d("onReceive","Logout in progress");
+                    Log.d("onReceive", "Logout in progress");
                     Intent i = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(i);
                     //At this point you should start the login activity and finish this one
